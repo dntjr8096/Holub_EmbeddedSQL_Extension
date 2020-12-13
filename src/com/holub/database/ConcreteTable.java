@@ -567,6 +567,8 @@ import com.holub.tools.ArrayIterator;
 
 			while (column.hasNext())
 				columnNames[i++] = column.next().toString();
+		}else{
+			columnNames = this.columnNames.clone();
 		}
 
 		if (other != null)
