@@ -21,9 +21,9 @@ public class XMLExporter implements Table.Exporter {
 
     @Override
     public void storeMetadata(String tableName, int width, int height, Iterator columnNames) throws IOException {
-        out.write("\t<table name = ");
+        out.write("\t<table name=\"");
         out.write(tableName.toString());
-        out.write(">");
+        out.write("\">\n");
 
         columns = new String[width];
         while (columnNames.hasNext()) {
@@ -35,7 +35,7 @@ public class XMLExporter implements Table.Exporter {
     @Override
     public void storeRow(Iterator data) throws IOException {
         i = 0;
-        out.write("\t<ROW>\n");
+        out.write("\t<row>\n");
         while (data.hasNext()) {
             Object rowData = data.next();
 
@@ -45,12 +45,12 @@ public class XMLExporter implements Table.Exporter {
             out.write("</" + columns[i].toString() + ">\n");
             i++;
         }
-        out.write("\t</ROW>\n");
+        out.write("\t</row>\n");
     }
 
     @Override
     public void endTable() throws IOException {
-        out.write("</table></root>");
+        out.write("\t</table>\n</root>");
     }
 
 }

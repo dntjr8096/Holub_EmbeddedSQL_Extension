@@ -2,10 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="34266e5a-d087-4aed-8486-a36c8dff7ee5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/holub/database/XMLExporter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/com/holub/database/HTMLExporter.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/com/holub/database/HTMLExporter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/holub/database/HTMLExporter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/holub/database/HTMLExporter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/com/holub/database/XMLExporter.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/com/holub/database/XMLExporter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/holub/database/XMLExporter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/holub/database/XMLExporter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/XMLExporterTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/XMLExporterTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,8 +15,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JUnit5 Test Class" />
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -53,7 +53,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Console">
+  <component name="RunManager" selected="JUnit.XMLExporterTest">
     <configuration name="Console" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.holub.database.jdbc.Console" />
       <module name="foo" />
@@ -80,19 +80,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="JTableExporter$Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.holub.database.JTableExporter$Test" />
-      <module name="foo" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.holub.database.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="HTMLExporterTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="foo" />
       <extension name="coverage">
@@ -108,12 +95,44 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="XMLExporterTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="foo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="test" />
+      <option name="MAIN_CLASS_NAME" value="test.XMLExporterTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="XMLExporterTest.insertRow" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="foo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="test" />
+      <option name="MAIN_CLASS_NAME" value="test.XMLExporterTest" />
+      <option name="METHOD_NAME" value="insertRow" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.XMLExporterTest" />
+        <item itemvalue="JUnit.XMLExporterTest.insertRow" />
         <item itemvalue="Application.Console" />
         <item itemvalue="JUnit.HTMLExporterTest" />
         <item itemvalue="Application.Database$Test" />
-        <item itemvalue="Application.JTableExporter$Test" />
       </list>
     </recent_temporary>
   </component>
@@ -140,7 +159,7 @@
       <option name="presentableId" value="Default" />
       <updated>1607796396398</updated>
       <workItem from="1607796407185" duration="10427000" />
-      <workItem from="1607863298423" duration="12877000" />
+      <workItem from="1607863298423" duration="14270000" />
     </task>
     <servers />
   </component>
@@ -152,10 +171,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="223" y="68" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824/-1920.5.1920.1040@0.0.1536.824" timestamp="1607797212413" />
-    <state x="93" y="93" width="1350" height="635" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog" timestamp="1607871273205">
+    <state x="93" y="93" width="1350" height="635" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog" timestamp="1607933143193">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="93" y="93" width="1350" height="635" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.0.1536.824/-1920.5.1920.1040@0.0.1536.824" timestamp="1607871273205" />
+    <state x="93" y="93" width="1350" height="635" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.0.1536.824/-1920.5.1920.1040@0.0.1536.824" timestamp="1607933143193" />
     <state x="574" y="122" key="#com.intellij.ide.util.MemberChooser" timestamp="1607864124784">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -164,26 +183,30 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="499" y="172" key="#com.intellij.ide.util.PackageChooserDialog/0.0.1536.824/-1920.5.1920.1040@0.0.1536.824" timestamp="1607867176677" />
+    <state x="560" y="297" width="415" height="239" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1607931772251">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="560" y="297" width="415" height="239" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1536.824/-1920.5.1920.1040@0.0.1536.824" timestamp="1607931772251" />
     <state x="388" y="6" key="CommitChangelistDialog2" timestamp="1607866135441">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="388" y="6" key="CommitChangelistDialog2/0.0.1536.824/-1920.5.1920.1040@0.0.1536.824" timestamp="1607866135441" />
-    <state width="1493" height="149" key="GridCell.Tab.0.bottom" timestamp="1607873646203">
+    <state width="1493" height="188" key="GridCell.Tab.0.bottom" timestamp="1607933147340">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="149" key="GridCell.Tab.0.bottom/0.0.1536.824/-1920.5.1920.1040@0.0.1536.824" timestamp="1607873646203" />
-    <state width="1493" height="149" key="GridCell.Tab.0.center" timestamp="1607873646202">
+    <state width="1493" height="188" key="GridCell.Tab.0.bottom/0.0.1536.824/-1920.5.1920.1040@0.0.1536.824" timestamp="1607933147340" />
+    <state width="1493" height="188" key="GridCell.Tab.0.center" timestamp="1607933147339">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="149" key="GridCell.Tab.0.center/0.0.1536.824/-1920.5.1920.1040@0.0.1536.824" timestamp="1607873646202" />
-    <state width="1493" height="149" key="GridCell.Tab.0.left" timestamp="1607873646202">
+    <state width="1493" height="188" key="GridCell.Tab.0.center/0.0.1536.824/-1920.5.1920.1040@0.0.1536.824" timestamp="1607933147339" />
+    <state width="1493" height="188" key="GridCell.Tab.0.left" timestamp="1607933147339">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="149" key="GridCell.Tab.0.left/0.0.1536.824/-1920.5.1920.1040@0.0.1536.824" timestamp="1607873646202" />
-    <state width="1493" height="149" key="GridCell.Tab.0.right" timestamp="1607873646203">
+    <state width="1493" height="188" key="GridCell.Tab.0.left/0.0.1536.824/-1920.5.1920.1040@0.0.1536.824" timestamp="1607933147339" />
+    <state width="1493" height="188" key="GridCell.Tab.0.right" timestamp="1607933147340">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="149" key="GridCell.Tab.0.right/0.0.1536.824/-1920.5.1920.1040@0.0.1536.824" timestamp="1607873646203" />
+    <state width="1493" height="188" key="GridCell.Tab.0.right/0.0.1536.824/-1920.5.1920.1040@0.0.1536.824" timestamp="1607933147339" />
     <state width="1493" height="149" key="GridCell.Tab.1.bottom" timestamp="1607873646203">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -208,10 +231,14 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="488" y="306" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/0.0.1536.824/-1920.5.1920.1040@0.0.1536.824" timestamp="1607867077774" />
-    <state x="540" y="115" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1607931630881">
+    <state x="570" y="330" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1607932732973">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="540" y="115" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.0.1536.824/-1920.5.1920.1040@0.0.1536.824" timestamp="1607931630881" />
+    <state x="570" y="330" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824/-1920.5.1920.1040@0.0.1536.824" timestamp="1607932732973" />
+    <state x="540" y="115" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1607931651460">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="540" y="115" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.0.1536.824/-1920.5.1920.1040@0.0.1536.824" timestamp="1607931651460" />
     <state x="459" y="143" width="618" height="538" key="find.popup" timestamp="1607873537507">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
