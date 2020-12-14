@@ -581,10 +581,11 @@ public final class Database
 								new File(location, current.name() + ".csv"));
 					current.export( new CSVExporter(out) );
 					out.close();
+
 					Writer out2 =
 							new FileWriter(
-									new File(location, current.name() + ".html"));
-					current.export( new HTMLExporter(out2) );
+									new File(location, current.name() + ".xml"));
+					current.export( new XMLExporter(out2) );
 					out2.close();
 				}
 			}

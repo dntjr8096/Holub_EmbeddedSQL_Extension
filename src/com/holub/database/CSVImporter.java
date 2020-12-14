@@ -75,6 +75,7 @@ public class CSVImporter implements Table.Importer
                         : new BufferedReader(in)
 	                    ;
 	}
+
 	public void startTable()			throws IOException
 	{	tableName   = in.readLine().trim();
 		columnNames = in.readLine().split("\\s*,\\s*");

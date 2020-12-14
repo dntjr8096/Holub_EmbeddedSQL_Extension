@@ -34,7 +34,7 @@ class XMLExporterTest {
     @DisplayName("테이블 초기화 테스트")
     void startTable() throws IOException {
         xmlExporter.startTable();
-        assertEquals(writer.toString(), "<?xml version=\"1.0\">\n<root>\n");
+        assertEquals(writer.toString(), "<?xml version=\"1.0\"?>\n<root>\n");
     }
 
 
@@ -60,6 +60,6 @@ class XMLExporterTest {
         xmlExporter.storeMetadata("person", 3, 1, Arrays.stream(col).iterator());
         xmlExporter.storeRow(Arrays.stream(row).iterator());
         xmlExporter.endTable();
-        assertEquals(writer.toString(), "<?xml version=\"1.0\">\n<root>\n\t<table name=\"person\">\n\t<row>\n\t\t<first>test1</first>\n\t\t<last>test1</last>\n\t\t<addrId>1</addrId>\n\t</row>\n\t</table>\n</root>");
+        assertEquals(writer.toString(), "<?xml version=\"1.0\"?>\n<root>\n\t<table name=\"person\">\n\t<row>\n\t\t<first>test1</first>\n\t\t<last>test1</last>\n\t\t<addrId>1</addrId>\n\t</row>\n\t</table>\n</root>");
     }
 }

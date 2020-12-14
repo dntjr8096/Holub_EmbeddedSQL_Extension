@@ -16,7 +16,7 @@ public class XMLExporter implements Table.Exporter {
 
     @Override
     public void startTable() throws IOException {
-        out.write("<?xml version=\"1.0\">\n<root>\n");
+        out.write("<?xml version=\"1.0\"?>\n<root>\n");
     }
 
     @Override

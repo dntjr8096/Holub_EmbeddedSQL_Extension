@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<root>
+	<table name="address">
+	<row>
+		<addrId>0</addrId>
+		<street>12 MyStreet</street>
+		<city>Berkeley</city>
+		<state>CA</state>
+		<zip>99998</zip>
+	</row>
+	<row>
+		<addrId>1</addrId>
+		<street>34 Quarry Ln.</street>
+		<city>Bedrock</city>
+		<state>AZ</state>
+		<zip>00000</zip>
+	</row>
+	</table>
+</root>
