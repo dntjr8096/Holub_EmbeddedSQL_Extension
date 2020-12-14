@@ -1,18 +1,18 @@
 package test;
 
-import com.holub.database.HTMLExporter;
 import com.holub.database.Table;
 import com.holub.database.TableFactory;
 import com.holub.database.XMLExporter;
-import org.junit.jupiter.api.*;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Test;
 
 import java.io.IOException;
 import java.io.StringWriter;
 import java.io.Writer;
-import java.lang.reflect.Array;
 import java.util.Arrays;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 @DisplayName("XML Exporter Test 시작")
 class XMLExporterTest {

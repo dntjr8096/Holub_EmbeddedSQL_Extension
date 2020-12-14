@@ -1,16 +1,15 @@
 package test;
 
-import com.holub.database.CSVImporter;
-import com.holub.database.Table;
 import com.holub.database.XMLImporter;
 import org.junit.jupiter.api.*;
 
-import java.io.*;
-import java.util.ArrayList;
+import java.io.File;
+import java.io.FileReader;
+import java.io.IOException;
 import java.util.Arrays;
 import java.util.Iterator;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
 class XMLImporterTest {
