@@ -24,11 +24,10 @@ public class HTMLExporter implements Table.Exporter{
 
         while (columnNames.hasNext()){
             Object column = columnNames.next();
-            if(column != null) {
-                out.write("<th>");
+            out.write("<th>");
+            if(column != null)
                 out.write(column.toString());
-                out.write("</th>");
-            }
+            out.write("</th>");
         }
     }
 
@@ -37,11 +36,10 @@ public class HTMLExporter implements Table.Exporter{
         out.write("<tr>");
         while(data.hasNext()){
             Object rowData = data.next();
-            if( rowData != null ) {
-                out.write("<td>");
+            out.write("<td>");
+            if( rowData != null )
                 out.write(rowData.toString());
-                out.write("</td>");
-            }
+            out.write("</td>");
         }
         out.write("</tr>");
 
