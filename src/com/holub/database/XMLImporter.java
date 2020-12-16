@@ -1,22 +1,21 @@
 package com.holub.database;
 
-        import com.holub.tools.ArrayIterator;
-        import jdk.internal.util.xml.impl.Input;
-        import org.w3c.dom.Document;
-        import org.w3c.dom.Element;
-        import org.w3c.dom.Node;
-        import org.w3c.dom.NodeList;
-        import org.xml.sax.InputSource;
-        import org.xml.sax.SAXException;
+import com.holub.tools.ArrayIterator;
+import org.w3c.dom.Document;
+import org.w3c.dom.Element;
+import org.w3c.dom.Node;
+import org.w3c.dom.NodeList;
+import org.xml.sax.InputSource;
+import org.xml.sax.SAXException;
 
-        import javax.print.Doc;
-        import javax.xml.parsers.DocumentBuilder;
-        import javax.xml.parsers.DocumentBuilderFactory;
-        import javax.xml.parsers.ParserConfigurationException;
-        import java.io.*;
-        import java.nio.charset.StandardCharsets;
-        import java.util.ArrayList;
-        import java.util.Iterator;
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.parsers.ParserConfigurationException;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.Reader;
+import java.util.ArrayList;
+import java.util.Iterator;
 
 public class XMLImporter implements Table.Importer {
     private DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
@@ -24,14 +23,14 @@ public class XMLImporter implements Table.Importer {
     private Document document = null;
     private BufferedReader in;
     private InputSource is;
-    private String[]        columnNames;
-    private String          tableName;
+    private String[] columnNames;
+    private String tableName;
     private int rowNum = 0;
     private int pos = 0;
 
     public XMLImporter(Reader in) {
         this.in = in instanceof BufferedReader
-                ? (BufferedReader)in
+                ? (BufferedReader) in
                 : new BufferedReader(in)
         ;
 
@@ -58,8 +57,8 @@ public class XMLImporter implements Table.Importer {
         rowNum = rows.getLength();
 
         ArrayList<String> cols = new ArrayList<>();
-        for(Node node=rows.item(0).getFirstChild(); node!=null; node=node.getNextSibling()){
-            if(node.getNodeType() == Node.ELEMENT_NODE)
+        for (Node node = rows.item(0).getFirstChild(); node != null; node = node.getNextSibling()) {
+            if (node.getNodeType() == Node.ELEMENT_NODE)
                 cols.add(node.getNodeName());
         }
         columnNames = cols.toArray(new String[cols.size()]);

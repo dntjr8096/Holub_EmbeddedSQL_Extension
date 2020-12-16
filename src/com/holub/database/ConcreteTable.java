@@ -473,7 +473,6 @@ import com.holub.tools.ArrayIterator;
 
 		//3번 확장 구현
 		//현재 테이블 + 다른 테이블들의 컬럼들은 Set에 담고 반환
-		//Todo: 조인테이블은 xml로 저장이 안됨 + where 없을 때 결과 이상함
 		if(requestedColumns == null){
 			Set<String> joinCols = new HashSet<String>();
 			for(String s: columnNames){
