@@ -4,7 +4,7 @@ import java.io.IOException;
 import java.io.Writer;
 import java.util.Iterator;
 
-public class XMLExporter implements Table.Exporter {
+public class XMLExporter implements Table.Exporter, Element {
 
     private final Writer out;
     private String[] columns;
@@ -53,4 +53,8 @@ public class XMLExporter implements Table.Exporter {
         out.write("\t</table>\n</root>");
     }
 
+    @Override
+    public void accept(ExporterVisitor exporterVisitor) throws IOException {
+        exporterVisitor.visitXMLExporter(this);
+    }
 }

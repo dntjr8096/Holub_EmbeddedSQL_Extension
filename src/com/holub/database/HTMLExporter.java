@@ -4,7 +4,7 @@ import java.io.IOException;
 import java.io.Writer;
 import java.util.Iterator;
 
-public class HTMLExporter implements Table.Exporter{
+public class HTMLExporter implements Table.Exporter, Element{
     private final Writer out;
 
     public HTMLExporter(Writer out) {
@@ -13,40 +13,45 @@ public class HTMLExporter implements Table.Exporter{
 
     @Override
     public void startTable() throws IOException {
-        out.write("<!DOCTYPE html>");
+        out.write("<!DOCTYPE html>\n");
     }
 
     @Override
     public void storeMetadata(String tableName, int width, int height, Iterator columnNames) throws IOException {
-        out.write("<html><head><title>");
+        out.write("<html>\n\t<head>\n\t\t<title>");
         out.write(tableName);
-        out.write("</title></head><body><table border=\"1\">");
+        out.write("</title>\n\t</head>\n\t<body>\n\t\t<table border=\"1\">\n");
 
         while (columnNames.hasNext()){
             Object column = columnNames.next();
-            out.write("<th>");
+            out.write("\t\t\t<th>");
             if(column != null)
                 out.write(column.toString());
-            out.write("</th>");
+            out.write("</th>\n");
         }
     }
 
     @Override
     public void storeRow(Iterator data) throws IOException {
-        out.write("<tr>");
+        out.write("\t\t\t<tr>\n");
         while(data.hasNext()){
             Object rowData = data.next();
-            out.write("<td>");
+            out.write("\t\t\t\t<td>");
             if( rowData != null )
                 out.write(rowData.toString());
-            out.write("</td>");
+            out.write("</td>\n");
         }
-        out.write("</tr>");
+        out.write("\t\t\t</tr>\n");
 
     }
 
     @Override
     public void endTable() throws IOException {
-        out.write("</table></body></html>");
+        out.write("\t\t</table>\n\t</body>\n</html>");
+    }
+
+    @Override
+    public void accept(ExporterVisitor exporterVisitor) throws IOException {
+        exporterVisitor.visitHTMLExporter(this);
     }
 }

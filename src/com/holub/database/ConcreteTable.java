@@ -48,7 +48,7 @@ import com.holub.tools.ArrayIterator;
  * @include /etc/license.txt
  */
 
-/* package */ class ConcreteTable implements Table {
+/* package */ public class ConcreteTable implements Table, ExporterVisitor {
 	// Supporting clone() complicates the following declarations. In
 	// particular, the fields can't be final because they're modified
 	// in the clone() method. Also, the rows field has to be declared
@@ -197,6 +197,16 @@ import com.holub.tools.ArrayIterator;
 	//
 	public Cursor rows() {
 		return new Results();
+	}
+
+	@Override
+	public void visitXMLExporter(XMLExporter xmlExporter) throws IOException {
+		export(xmlExporter);
+	}
+
+	@Override
+	public void visitHTMLExporter(HTMLExporter htmlExporter) throws IOException {
+		export(htmlExporter);
 	}
 
 	// ----------------------------------------------------------------------

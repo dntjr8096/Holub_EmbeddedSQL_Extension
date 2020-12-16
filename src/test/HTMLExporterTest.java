@@ -32,7 +32,7 @@ class HTMLExporterTest {
     @Test
     void startTable() throws IOException {
        htmlExporter.startTable();
-       assertEquals(writer.toString(), "<!DOCTYPE html>");
+       assertEquals(writer.toString(), "<!DOCTYPE html>\n");
     }
 
     @DisplayName("테이블 완성 결과 확인")
@@ -42,6 +42,23 @@ class HTMLExporterTest {
         htmlExporter.storeMetadata("name", 3, 1, Arrays.stream(col).iterator());
         htmlExporter.storeRow(Arrays.stream(row).iterator());
         htmlExporter.endTable();
-        assertEquals(writer.toString(), "<!DOCTYPE html><html><head><title>name</title></head><body><table border=\"1\"><th>first</th><th>last</th><th>addrId</th><tr><td>test1</td><td>test1</td><td>1</td></tr></table></body></html>");
+        assertEquals(writer.toString(), "<!DOCTYPE html>\n" +
+                "<html>\n" +
+                "\t<head>\n" +
+                "\t\t<title>name</title>\n" +
+                "\t</head>\n" +
+                "\t<body>\n" +
+                "\t\t<table border=\"1\">\n" +
+                "\t\t\t<th>first</th>\n" +
+                "\t\t\t<th>last</th>\n" +
+                "\t\t\t<th>addrId</th>\n" +
+                "\t\t\t<tr>\n" +
+                "\t\t\t\t<td>test1</td>\n" +
+                "\t\t\t\t<td>test1</td>\n" +
+                "\t\t\t\t<td>1</td>\n" +
+                "\t\t\t</tr>\n" +
+                "\t\t</table>\n" +
+                "\t</body>\n" +
+                "</html>");
     }
 }

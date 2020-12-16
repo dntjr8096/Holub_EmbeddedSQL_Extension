@@ -50,7 +50,12 @@ class XMLExporterTest {
     void insertRow() throws IOException {
         xmlExporter.storeMetadata("person", 3, 1, Arrays.stream(col).iterator());
         xmlExporter.storeRow(Arrays.stream(row).iterator());
-        assertEquals(writer.toString(), "\t<table name=\"person\">\n\t<row>\n\t\t<first>test1</first>\n\t\t<last>test1</last>\n\t\t<addrId>1</addrId>\n\t</row>\n");
+        assertEquals(writer.toString(), "\t<table name=\"person\">\n" +
+                "\t<row>\n" +
+                "\t\t<first>test1</first>\n" +
+                "\t\t<last>test1</last>\n" +
+                "\t\t<addrId>1</addrId>\n" +
+                "\t</row>\n");
     }
 
     @Test
@@ -60,6 +65,15 @@ class XMLExporterTest {
         xmlExporter.storeMetadata("person", 3, 1, Arrays.stream(col).iterator());
         xmlExporter.storeRow(Arrays.stream(row).iterator());
         xmlExporter.endTable();
-        assertEquals(writer.toString(), "<?xml version=\"1.0\"?>\n<root>\n\t<table name=\"person\">\n\t<row>\n\t\t<first>test1</first>\n\t\t<last>test1</last>\n\t\t<addrId>1</addrId>\n\t</row>\n\t</table>\n</root>");
+        assertEquals(writer.toString(), "<?xml version=\"1.0\"?>\n" +
+                "<root>\n" +
+                "\t<table name=\"person\">\n" +
+                "\t<row>\n" +
+                "\t\t<first>test1</first>\n" +
+                "\t\t<last>test1</last>\n" +
+                "\t\t<addrId>1</addrId>\n" +
+                "\t</row>\n" +
+                "\t</table>\n" +
+                "</root>");
     }
 }
